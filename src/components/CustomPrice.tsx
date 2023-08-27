@@ -9,8 +9,8 @@ const CustomPrice =  (props: Props) => {
   const [intStr, dotStr] = priceStr.toString().split('.');
   return (
     <div className='text-center'>
-      <span className='mr-4'>$</span>
-      <span className='show-price' style={{ fontSize: 24, fontWeight: 700 }}>{intStr}</span>
+      <span className='mr-1'>$</span>
+      <span className='text-2xl	font-bold'>{intStr}</span>
       .{dotStr}
     </div>
   );
