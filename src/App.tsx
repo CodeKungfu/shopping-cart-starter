@@ -63,7 +63,7 @@ function App() {
                 <Radio.Button value="DESC">按价格降序</Radio.Button>
             </Radio.Group>
           </div>
-          <div className="mx-2 mt-5 mb-2">共找到16个商品</div>
+          {/* <div className="mx-2 mt-5 mb-2">共找到16个商品</div> */}
           <CartDrawer></CartDrawer>
           <Products></Products>
           <ProductSizeDialog></ProductSizeDialog>
