@@ -8,6 +8,9 @@ import { replaceItemAtIndex } from '@/utils/index';
 const CartProducts = () => {
     const [cart, setCart] = useRecoilState(cartState);
     const onChange = (cartItem: CartItem, value: number) => {
+        if (!value) {
+            return;
+        }
         const index = cart.findIndex((item) => item.product.id === cartItem.product.id && item.size === cartItem.size);
         const newCart = replaceItemAtIndex(cart, index, {
             ...cartItem,
