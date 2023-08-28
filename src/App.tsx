@@ -12,32 +12,32 @@ import { SizeType } from "@/interfaces/IProducts";
 const { Header, Content, Footer } = Layout;
 const CheckboxGroup = Checkbox.Group;
 const ALLSizeList = [
-    SizeType.XS,
-    SizeType.S,
-    SizeType.M,
-    SizeType.ML,
-    SizeType.L,
-    SizeType.XL,
-    SizeType.XXL
-  ]
+  SizeType.XS,
+  SizeType.S,
+  SizeType.M,
+  SizeType.ML,
+  SizeType.L,
+  SizeType.XL,
+  SizeType.XXL
+]
 
 function App() {
   const totalInfo = useRecoilValue(cartTotalState);
-    const [, setIsOpenCart] = useRecoilState(isOpenCartState);
-    const [currentProductQuery, setCurrentProductQuery] = useRecoilState(currentProductQueryState);
-    const plainOptions = ALLSizeList;
-    const onChange = (list: any) => {
-        setCurrentProductQuery({
-            filter: list.length === 0 ? '' : list.join(','),
-            sort: currentProductQuery.sort
-        });
-    };
-    const onChangeSort = ({ target: { value } }: RadioChangeEvent) => {
-        setCurrentProductQuery({
-            filter: currentProductQuery.filter,
-            sort: value
-        });
-    }
+  const [, setIsOpenCart] = useRecoilState(isOpenCartState);
+  const [currentProductQuery, setCurrentProductQuery] = useRecoilState(currentProductQueryState);
+  const plainOptions = ALLSizeList;
+  const onChange = (list: any) => {
+    setCurrentProductQuery({
+      filter: list.length === 0 ? '' : list.join(','),
+      sort: currentProductQuery.sort
+    });
+  };
+  const onChangeSort = ({ target: { value } }: RadioChangeEvent) => {
+    setCurrentProductQuery({
+      filter: currentProductQuery.filter,
+      sort: value
+    });
+  }
   return (
     <>
       <Layout>
@@ -45,11 +45,11 @@ function App() {
           <Row justify="space-between">
             <Col className="text-white" xs={2} sm={4} md={6} lg={4} xl={4}>商城购物车</Col>
             <Col xs={2} sm={4} md={6} lg={4} xl={4} className='text-right'>
-                <span onClick={() => { setIsOpenCart(true); }}>
-                    <Badge className="text-white cursor-pointer" count={totalInfo.tipsNum}>
-                        <Avatar size="large" icon={<ShoppingCartOutlined />} />
-                    </Badge>
-                </span>
+              <span onClick={() => { setIsOpenCart(true); }}>
+                <Badge className="text-white cursor-pointer" count={totalInfo.tipsNum}>
+                  <Avatar size="large" icon={<ShoppingCartOutlined />} />
+                </Badge>
+              </span>
             </Col>
           </Row>
         </Header>
@@ -59,8 +59,8 @@ function App() {
           </div>
           <div className="mx-2 my-5">价格：
             <Radio.Group value={currentProductQuery.sort} onChange={onChangeSort}>
-                <Radio.Button value="ASC">按价格升序</Radio.Button>
-                <Radio.Button value="DESC">按价格降序</Radio.Button>
+              <Radio.Button value="ASC">按价格升序</Radio.Button>
+              <Radio.Button value="DESC">按价格降序</Radio.Button>
             </Radio.Group>
           </div>
           {/* <div className="mx-2 mt-5 mb-2">共找到16个商品</div> */}
