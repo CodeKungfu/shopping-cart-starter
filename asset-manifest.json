@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/shopping-cart-starter/static/css/main.4efb37a3.css",
-    "main.js": "/shopping-cart-starter/static/js/main.9357ba12.js",
+    "main.js": "/shopping-cart-starter/static/js/main.6ff57a6d.js",
     "static/js/27.08150b9e.chunk.js": "/shopping-cart-starter/static/js/27.08150b9e.chunk.js",
     "index.html": "/shopping-cart-starter/index.html"
   },
   "entrypoints": [
     "static/css/main.4efb37a3.css",
-    "static/js/main.9357ba12.js"
+    "static/js/main.6ff57a6d.js"
   ]
 }
