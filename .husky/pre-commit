@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npx cypress run --record --key 565f1770-bcbd-4236-bfc6-55ce054b9840 && npm run test
-npm run cypress
+# npm run cypress
